@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+
+{% block content %}
+    <form method="post">
+        {% csrf_token %}
+        <p>"{{ object }}"을(를) 정말 삭제하시겠습니까?</p>
+        <input type="submit" value="진행"/>
+    </form>
+{% endblock content %}

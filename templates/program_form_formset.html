@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+
+{% block content %}
+    <form method="post">
+        {% csrf_token %}
+
+        <h4>Program</h4>
+        {{ form.as_p }}
+
+        <h4>URL</h4>
+        {{ formset.management_form }}
+        {% for each_form in formset %}
+            <p>
+                {{ each_form }}
+            </p>
+        {% endfor %}
+
+        <p>
+            <input type="submit" value="전송"/>
+            {% if object %}
+                <input type="button" value="삭제"
+                       onclick="location.href='{% url 'program_formset:delete' object.id %}'"/>
+            {% endif %}
+        </p>
+    </form>
+{% endblock content %}
+

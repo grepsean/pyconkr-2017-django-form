@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+
+{% block content %}
+    <ul>
+        {% for object in object_list %}
+            <li><a href="{% url 'program_formview:update' object.id %}">{{ object }}</a></li>
+        {% endfor %}
+    </ul>
+{% endblock content %}
