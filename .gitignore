@@ -94,3 +94,6 @@ ENV/
 
 # sqlite
 *.sqlite3
+
+# .idea
+.idea
