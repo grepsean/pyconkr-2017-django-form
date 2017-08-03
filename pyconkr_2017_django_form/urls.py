@@ -22,4 +22,5 @@ urlpatterns = [
     url(r'^program/formview/', include('demo_formview.urls', namespace='program_formview')),
     url(r'^program/generic/', include('demo_generic.urls', namespace='program_generic')),
     url(r'^program/formset/', include('demo_formset.urls', namespace='program_formset')),
+    url(r'^program/crispy/', include('demo_crispy.urls', namespace='program_crispy')),
 ]
